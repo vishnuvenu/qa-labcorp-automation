@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Job Search on LabCorp Website" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-07-25T08:11:51.768Z" hostname="MacBook-Pro.local" time="34.489">
+  <properties/>
+  <testcase name="Search and verify details of a QA job posting" classname="Job Search on LabCorp Website" time="34.489">
+    <failure message="org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: h1 (tried for 10 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.21.0', revision: '79ed462ef4'&#10;System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '11.0.27'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.169, chrome: {chromedriverVersion: 138.0.7204.168 (3e8d82e86e9..., userDataDir: /var/folders/_5/wkv9xf9j6kl...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65491}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:65491/devtoo..., se:cdpVersion: 138.0.7204.169, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 929bedd2e0cb201c88c503800666bd21" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: h1 (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '11.0.27'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.169, chrome: {chromedriverVersion: 138.0.7204.168 (3e8d82e86e9..., userDataDir: /var/folders/_5/wkv9xf9j6kl...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65491}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:65491/devtoo..., se:cdpVersion: 138.0.7204.169, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 929bedd2e0cb201c88c503800666bd21
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//steps.JobDetailsPage.&lt;init&gt;(JobDetailsPage.java:19)
+	at app//steps.JobSearchSteps.verify_job_details(JobSearchSteps.java:49)
+	at ✽.I should see the correct job details(file:///Users/vishnu/Desktop/qa-labcorp-automation/src/test/resources/features/JobSearch.feature:7)
+</failure>
+  </testcase>
+  <system-out><![CDATA[
+Scenario: Search and verify details of a QA job posting       # src/test/resources/features/JobSearch.feature:3
+  Given I open LabCorp careers website                        # steps.JobSearchSteps.open_labcorp()
+  When I search for job titled "QA Test Automation Developer" # steps.JobSearchSteps.search_job(java.lang.String)
+  And I select the job from search results                    # steps.JobSearchSteps.select_job()
+  Then I should see the correct job details                   # steps.JobSearchSteps.verify_job_details(io.cucumber.datatable.DataTable)
+    | Job_title             | Job_location                    | Job_id  |
+    | Application Developer | Navi Mumbai, Maharashtra, India | 2524429 |
+      org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: h1 (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '11.0.27'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.169, chrome: {chromedriverVersion: 138.0.7204.168 (3e8d82e86e9..., userDataDir: /var/folders/_5/wkv9xf9j6kl...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65491}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:65491/devtoo..., se:cdpVersion: 138.0.7204.169, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 929bedd2e0cb201c88c503800666bd21
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at steps.JobDetailsPage.<init>(JobDetailsPage.java:19)
+	at steps.JobSearchSteps.verify_job_details(JobSearchSteps.java:49)
+	at ✽.I should see the correct job details(file:///Users/vishnu/Desktop/qa-labcorp-automation/src/test/resources/features/JobSearch.feature:7)
+
+]]></system-out>
+  <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+Jul 25, 2025 1:41:53 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 25, 2025 1:41:53 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.169. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>

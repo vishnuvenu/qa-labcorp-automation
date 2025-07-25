@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.labcorp'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.21.0'
+    testImplementation 'io.cucumber:cucumber-java:7.14.0'
+    testImplementation 'io.cucumber:cucumber-junit:7.14.0'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'io.github.bonigarcia:webdrivermanager:5.8.0'
+
+    // REST Assured for API Testing
+    testImplementation 'io.rest-assured:rest-assured:5.4.0'
+    testImplementation 'io.rest-assured:json-path:5.4.0'
+    testImplementation 'io.rest-assured:json-schema-validator:5.4.0'
+
+    // Jackson or Gson for JSON support (Optional)
+    testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.17.1'
+}
+
+test {
+    useJUnit()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}

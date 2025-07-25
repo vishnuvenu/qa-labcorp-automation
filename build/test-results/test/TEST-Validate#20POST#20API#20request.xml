@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Validate POST API request" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-07-25T08:12:27.579Z" hostname="MacBook-Pro.local" time="0.017">
+  <properties/>
+  <testcase name="Submit POST request and validate fields" classname="Validate POST API request" time="0.017">
+    <failure message="io.cucumber.junit.UndefinedStepException: The step 'I send a POST request to &quot;https://echo.free.beeceptor.com/sample-request?author=beeceptor&quot; with valid payload' and 1 other step(s) are undefined.&#10;You can implement these steps using the snippet(s) below:&#10;&#10;@Given(&quot;I send a POST request to {string} with valid payload&quot;)&#10;public void i_send_a_post_request_to_with_valid_payload(String string) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;the response should include order details, customer, payment and items&quot;)&#10;public void the_response_should_include_order_details_customer_payment_and_items() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.UndefinedStepException">io.cucumber.junit.UndefinedStepException: The step 'I send a POST request to &quot;https://echo.free.beeceptor.com/sample-request?author=beeceptor&quot; with valid payload' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given(&quot;I send a POST request to {string} with valid payload&quot;)
+public void i_send_a_post_request_to_with_valid_payload(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;the response should include order details, customer, payment and items&quot;)
+public void the_response_should_include_order_details_customer_payment_and_items() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</failure>
+  </testcase>
+  <system-out><![CDATA[
+Scenario: Submit POST request and validate fields                                                                     # src/test/resources/features/post-api.feature:3
+  Given I send a POST request to "https://echo.free.beeceptor.com/sample-request?author=beeceptor" with valid payload
+  Then the response should include order details, customer, payment and items
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

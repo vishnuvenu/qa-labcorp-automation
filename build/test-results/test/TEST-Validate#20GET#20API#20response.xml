@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Validate GET API response" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-25T08:12:26.258Z" hostname="MacBook-Pro.local" time="1.321">
+  <properties/>
+  <testcase name="Validate fields in GET response" classname="Validate GET API response" time="1.321"/>
+  <system-out><![CDATA[
+Scenario: Validate fields in GET response                                                         # src/test/resources/features/get-api.feature:3
+  Given I send a GET request to "https://echo.free.beeceptor.com/sample-request?author=beeceptor" # steps.GetApiSteps.i_send_get_request(java.lang.String)
+{
+  "method": "GET",
+  "protocol": "https",
+  "host": "echo.free.beeceptor.com",
+  "path": "/sample-request?author=beeceptor",
+  "ip": "223.185.131.221:12105",
+  "headers": {
+    "Host": "echo.free.beeceptor.com",
+    "User-Agent": "Apache-HttpClient/4.5.13 (Java/11.0.27)",
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip,deflate",
+    "Content-Type": "application/json",
+    "Via": "1.1 Caddy"
+  },
+  "parsedQueryParams": {
+    "author": "beeceptor"
+  },
+  "rawBody": "[object Object]",
+  "warnings": [
+    "Error in parsing JSON body. Please check the syntax. [\"[object Object]\" is not valid JSON]"
+  ]
+}
+  Then the response should contain fields "path", "ip", and "headers"                             # steps.GetApiSteps.validate_fields(java.lang.String,java.lang.String,java.lang.String)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
